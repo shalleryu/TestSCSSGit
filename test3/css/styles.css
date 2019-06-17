@@ -1,0 +1,91 @@
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: #f9f6ef; }
+
+.c-header {
+  width: 100%;
+  text-align: center; }
+  .c-header h1 {
+    font-weight: 700;
+    color: #333; }
+
+.c-box {
+  background: #587b7f;
+  flex-basis: 30%;
+  font-size: 150%;
+  margin: 5vmin;
+  padding: 5vmin;
+  color: #fff;
+  text-align: center; }
+  .c-box--arrow-top {
+    position: relative; }
+    .c-box--arrow-top::after {
+      position: absolute;
+      content: '';
+      border-top: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #587b7f;
+      border-left: 10px solid transparent;
+      top: -20px;
+      margin-left: -10px;
+      left: 50%; }
+  .c-box--arrow-right {
+    position: relative; }
+    .c-box--arrow-right::after {
+      position: absolute;
+      content: '';
+      border-top: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 10px solid #587b7f;
+      right: -20px;
+      margin-top: -10px;
+      top: 50%; }
+  .c-box--arrow-bottom {
+    position: relative; }
+    .c-box--arrow-bottom::after {
+      position: absolute;
+      content: '';
+      border-top: 10px solid #587b7f;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 10px solid transparent;
+      bottom: -20px;
+      margin-left: -10px;
+      left: 50%; }
+  .c-box--arrow-left {
+    position: relative; }
+    .c-box--arrow-left::after {
+      position: absolute;
+      content: '';
+      border-top: 10px solid transparent;
+      border-right: 10px solid #587b7f;
+      border-bottom: 10px solid transparent;
+      border-left: 10px solid transparent;
+      left: -20px;
+      margin-top: -10px;
+      top: 50%; }
+
+.c-footer {
+  width: 100%;
+  text-align: center; }
+
+.c-btn {
+  background: #d87517;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: .1em;
+  padding: .75em 1.5em .85em;
+  text-transform: uppercase;
+  font-size: 120%;
+  border: 3px solid #d87517;
+  border-radius: 2px;
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1); }
+  .c-btn:hover {
+    color: #d87517;
+    background: #fff;
+    transition: .2s ease-out;
+    box-shadow: 0 6px 0 0 rgba(0, 0, 0, 0.2); }
