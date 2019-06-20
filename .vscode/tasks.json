@@ -1,0 +1,48 @@
+// Sass configuration
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "test4 watch",
+            "type": "shell",
+            "command": "gulp test4-watch",
+            "problemMatcher": [
+                "$node-sass"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "test view",
+            "type": "shell",
+            "command": "explorer",
+            "windows": {
+                "command": "explorer.exe"
+            },
+            "args": [
+                "${file}"
+            ],
+            "problemMatcher": [
+                "$msCompile"
+            ]
+        }
+    ],
+    // "tasks": [
+    //     {
+    //         "label": "Sass Compile",
+    //         "type": "shell",
+    //         "command": "node-sass styles.scss styles.css",
+    //         "group": {
+    //             "kind": "build",
+    //             "isDefault": true
+    //         },
+    //         "problemMatcher": [
+    //             "$node-sass"
+    //         ]
+    //     }
+    // ]
+}
