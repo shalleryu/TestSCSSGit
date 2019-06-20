@@ -1,0 +1,15 @@
+{
+  "name": "testscssgit",
+  "version": "1.0.0",
+  "description": "learn scss and git",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "compass": "^0.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
