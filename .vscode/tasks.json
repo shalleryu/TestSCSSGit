@@ -29,6 +29,22 @@
             "problemMatcher": [
                 "$msCompile"
             ]
+        },
+        {
+            "label": "compass run",
+            "type": "shell",
+            "command": "compass watch test5",
+            "windows": {
+                "command": "compass watch test5"
+            },
+        },
+        {
+            "label": "server run",
+            "type": "shell",
+            "command": "http-server test5",
+            "windows": {
+                "command": "http-server test5"
+            },
         }
     ],
     // "tasks": [

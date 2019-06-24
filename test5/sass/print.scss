@@ -1,3 +1,52 @@
 /* Welcome to Compass. Use this file to define print styles.
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+@import "compass/css3";
+
+.rounded {
+    @include border-radius(5px);
+}
+
+.rounded2 {
+    @include border-corner-radius(top, left, 5px);
+}
+
+#opacity {
+    @include opacity(0.5);
+}
+
+#inline-block {
+    @include inline-block;
+}
+
+@import "compass/layout";
+
+#footer {
+    @include sticky-footer(54px);
+}
+
+#stretch-full {
+    @include stretch;
+}
+
+@import "compass/typography";
+
+a {
+    @include link-colors(#00c, #00c, #c0c, #ccc, #cc0);
+}
+
+@import "compass/utilities";
+
+.clearfix {
+    @include clearfix;
+}
+
+table {
+    @include table-scaffolding;
+}
+
+@import "compass";
+
+.icon {
+    background-image: inline-image("icon.png");
+}
