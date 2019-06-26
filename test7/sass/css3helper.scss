@@ -1,0 +1,110 @@
+@import "compass/css3";
+$experimental-support-for-opera: false;
+$experimental-support-for-microsoft: false;
+$experimental-support-for-khtml: false;
+
+.notice {
+    @include border-radius(5px);
+}
+
+button {
+    background: red;
+    border: 0;
+    color: #fff;
+    line-height: 30px;
+    width: 100px;
+}
+
+button.rounded {
+    @include border-radius(5px)
+}
+
+button.really-rounded {
+    @include border-radius(10px)
+}
+
+button.extreme-rounded {
+    @include border-radius(30px)
+}
+
+h2 {
+    @include box-shadow(#ccc 5px 5px 2px);
+    text-shadow: #ddd -1px 1px 0;
+    background: #999;
+    padding: 1em;
+}
+
+$shadow-1: rgba(#000, .5) -200px 0 0;
+$shadow-2: rgba(#000, .4) -400px 0 0;
+$shadow-3: rgba(#000, .3) -600px 0 0;
+$shadow-4: rgba(#000, .2) -800px 0 0;
+
+.motion {
+    @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4);
+    font-size: 2em;
+    font-style: italic;
+    text-align: right;
+}
+
+.skipping {
+    @include text-shadow($shadow-2, $shadow-4);
+}
+
+$shadow-color: #ccc;
+$shadow-h: 5px;
+$shadow-v: 5px;
+$shadow-blur: 0;
+$default-text-shadow-color: $shadow-color;
+$default-text-shadow-h-offset: $shadow-h;
+$default-text-shadow-v-offset: $shadow-v;
+$default-text-shadow-blur: $shadow-blur;
+$default-box-shadow-color: $shadow-color;
+$default-box-shadow-h-offset: $shadow-h;
+$default-box-shadow-v-offset: $shadow-v;
+$default-box-shadow-blur: $shadow-blur;
+
+h1,
+h2 {
+    font-family: sans-serif;
+}
+
+h1 {
+    @include text-shadow;
+}
+
+h2 {
+    @include box-shadow;
+    @include single-text-shadow(#ddd, -1px, 1px);
+    background: #999;
+    padding: 1em;
+}
+
+#pattern {
+    @include background(linear-gradient(360deg,
+            #bfbfbf 0%,
+            #bfbfbf 12.5%,
+            #bfbf00 12.5%,
+            #bfbf00 25%,
+            #00bfbf 25%,
+            #00bfbf 37.5%,
+            #bfbf00 37.5%,
+            #00bf00 37.5%,
+            #00bf00 50%,
+            #bf00bf 50%,
+            #bf00bf 62.5%,
+            #bf0000 62.5%,
+            #bf0000 75%,
+            #0000bf 75%,
+            #0000bf 87.5%,
+            #000 87.5%,
+            #000 100%));
+    height: 300px;
+    margin: 100px auto;
+    width: 400px;
+}
+
+@include font-face("ChunkFiveRegular",
+    font-files("Chunkfive-webfont.woff", woff,
+        "Chunkfive-webfont.ttf", ttf,
+        "Chunkfive-webfont.svg", svg),
+    "Chunkfive-webfont.eot", normal, normal);
