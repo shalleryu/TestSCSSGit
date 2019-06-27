@@ -12,7 +12,8 @@
     "gulp-hub": "^4.2.0",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
-    "gulp-webserver": "^0.9.1"
+    "gulp-webserver": "^0.9.1",
+    "open": ">=6.0.0"
   },
   "scripts": {
     "start": "http-server test7 -a localhost -p 8081  -c-1",
