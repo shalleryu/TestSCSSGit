@@ -5,32 +5,44 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "css publish",
-            "type": "shell",
-            "command": "gulp css --cwd ${workspaceFolder}",
-            "problemMatcher": [
-                "$node-sass"
-            ],
-        },
-        {
-            "label": "run webserver",
-            "type": "shell",
-            "command": "gulp webserver --cwd ${workspaceFolder}",
-            "problemMatcher": [
-                "$node-sass"
-            ],
-        },
-        {
             "label": "Build",
-            "dependsOn": [
-                "css publish",
-                "run webserver"
+            "type": "npm",
+            "script": "build",
+            "problemMatcher": [
+                "$node-sass"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
-        },
+        }
+        // {
+        //     "label": "css publish",
+        //     "type": "shell",
+        //     "command": "gulp css --cwd ${workspaceFolder}",
+        //     "problemMatcher": [
+        //         "$node-sass"
+        //     ],
+        // },
+        // {
+        //     "label": "run webserver",
+        //     "type": "shell",
+        //     "command": "gulp webserver --cwd ${workspaceFolder}",
+        //     "problemMatcher": [
+        //         "$node-sass"
+        //     ],
+        // },
+        // {
+        //     "label": "Build",
+        //     "dependsOn": [
+        //         "css publish",
+        //         "run webserver"
+        //     ],
+        //     "group": {
+        //         "kind": "build",
+        //         "isDefault": true
+        //     }
+        // },
     ],
     // "tasks": [
     // {

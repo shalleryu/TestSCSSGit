@@ -17,7 +17,8 @@
   },
   "scripts": {
     "start": "http-server test7 -a localhost -p 8081  -c-1",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"gulp build"
   },
   "repository": {
     "type": "git",
