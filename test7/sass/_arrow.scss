@@ -37,26 +37,26 @@
 
 // examples:
 
-.down-arrow {
-    @include arrow(down, 50px, black);
-}
+// .down-arrow {
+//     @include arrow(down, 50px, black);
+// }
 
-.up-arrow {
-    @include arrow(up, 20px, black);
-}
+// .up-arrow {
+//     @include arrow(up, 20px, black);
+// }
 
-.left-arrow {
-    @include arrow(left, 10px, black);
-}
+// .left-arrow {
+//     @include arrow(left, 10px, black);
+// }
 
-.right-arrow {
-    @include arrow(right, 5px, black);
-}
+// .right-arrow {
+//     @include arrow(right, 5px, black);
+// }
 
-div {
-    float: left;
-    margin: 20px;
-}
+// div {
+//     float: left;
+//     margin: 20px;
+// }
 
 
 //   /// Triangle helper mixin

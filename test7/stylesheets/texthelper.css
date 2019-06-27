@@ -1,5 +1,6 @@
 /* line 3, ../sass/texthelper.scss */
 td.dot-dot-dot {
+  display: flex;
   white-space: nowrap;
   overflow: hidden;
   -ms-text-overflow: ellipsis;
@@ -7,12 +8,12 @@ td.dot-dot-dot {
   text-overflow: ellipsis;
 }
 
-/* line 7, ../sass/texthelper.scss */
+/* line 8, ../sass/texthelper.scss */
 td {
   white-space: nowrap;
 }
 
-/* line 9, ../sass/texthelper.scss */
+/* line 10, ../sass/texthelper.scss */
 h1.coffee {
   text-indent: -119988px;
   overflow: hidden;

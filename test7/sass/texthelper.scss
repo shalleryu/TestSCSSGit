@@ -1,7 +1,8 @@
 @import "compass";
 
 td.dot-dot-dot {
-    @include ellipsis;
+display:flex;
+@include ellipsis;
 }
 
 td { @include nowrap }

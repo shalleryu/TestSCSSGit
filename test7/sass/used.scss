@@ -1,60 +1,84 @@
 @import "compass";
-@import "border";
 @import "arrow";
+@import "border";
 
-.test_arrow_right {
+// .test_arrow_right {
+//     display: -webkit-box;
+//     display: -ms-flexbox;
+//     display: flex;
+//     @include arrow_right;
 
-    @include arrow_right;
+// }
 
+// .test_arrow_down {
+//     float: right;
+//     @include arrow_right;
+//     -webkit-transform: rotate(45deg);
+//     transform: rotate(45deg);
+// }
+
+// .test_border_half2 {
+//     @include border_half {
+//         border: 1px solid #555;
+//         border-radius: 1px;
+//     }
+
+//     ;
+//     // @include box_sizing;
+//     // @include inline-flex;
+//     // @include triangle(bottom, 0.5rem, #444) ;
+//     // @include arrow-right;
+//     // @include flexbox;
+//     // .test2{
+//     //     @include box_flex(1);
+
+//     // }
+
+// }
+
+// .test_border_vertical_half2 {
+//     @include border_half {
+//         border-top: 1px solid #234;
+//         border-bottom: 1px solid #234;
+//     }
+
+//     ;
+
+// }
+
+// .test_border_bottom_half2 {
+//     @include border_half {
+//         border-bottom: 1px solid black;
+//     }
+
+//     ;
+// }
+
+// .element {
+//     &::after {
+//         @include triangle("down", 2rem, 1rem, #b25c9c);
+//         content: "";
+//     }
+// }
+
+
+.fourth-face {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+            -ms-flex-wrap:nowrap;
+                flex-wrap:nowrap;
 }
 
-.test_arrow_down {
-    float: right;
-    @include arrow_right;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+.t1 {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
 }
-
-.test_border_half2 {
-    @include border_half {
-        border: 1px solid #555;
-        border-radius: 1px;
-    }
-
-    ;
-    // @include box_sizing;
-    // @include inline-flex;
-    // @include triangle(bottom, 0.5rem, #444) ;
-    // @include arrow-right;
-    // @include flexbox;
-    // .test2{
-    //     @include box_flex(1);
-
-    // }
-
-}
-
-.test_border_vertical_half2 {
-    @include border_half {
-        border-top: 1px solid #234;
-        border-bottom: 1px solid #234;
-    }
-
-    ;
-
-}
-
-.test_border_bottom_half2 {
-    @include border_half {
-        border-bottom: 1px solid black;
-    }
-
-    ;
-}
-
-.element {
-    &::after {
-      @include triangle("down", 2rem, 1rem, #b25c9c);
-      content: "";
-    }
-  }
