@@ -5,49 +5,55 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "test4 watch",
+            "label": "css publish",
             "type": "shell",
-            "command": "gulp test4-watch",
+            "command": "gulp css --cwd ${workspaceFolder}",
             "problemMatcher": [
                 "$node-sass"
+            ],
+        },
+        {
+            "label": "run webserver",
+            "type": "shell",
+            "command": "gulp webserver --cwd ${workspaceFolder}",
+            "problemMatcher": [
+                "$node-sass"
+            ],
+        },
+        {
+            "label": "Build",
+            "dependsOn": [
+                "css publish",
+                "run webserver"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
         },
-        {
-            "label": "test view",
-            "type": "shell",
-            "command": "explorer",
-            "windows": {
-                "command": "explorer.exe"
-            },
-            "args": [
-                "${file}"
-            ],
-            "problemMatcher": [
-                "$msCompile"
-            ]
-        },
-        {
-            "label": "compass run",
-            "type": "shell",
-            "command": "compass watch test5",
-            "windows": {
-                "command": "compass watch test5"
-            },
-        },
-        {
-            "label": "server run",
-            "type": "shell",
-            "command": "http-server test5",
-            "windows": {
-                "command": "http-server test5"
-            },
-        }
     ],
     // "tasks": [
+    // {
+    //     "label": "echo",
+    //     "type": "shell",
+    //     "command": "echo ${workspaceFolder}"
+    // },
+    // {
+    //     "label": "compass run",
+    //     "type": "shell",
+    //     "command": "compass watch test5",
+    //     "windows": {
+    //         "command": "compass watch test5"
+    //     },
+    // },
+    // {
+    //     "label": "server run",
+    //     "type": "shell",
+    //     "command": "http-server test5",
+    //     "windows": {
+    //         "command": "http-server test5"
+    //     },
+    // },
     //     {
     //         "label": "Sass Compile",
     //         "type": "shell",
@@ -59,6 +65,28 @@
     //         "problemMatcher": [
     //             "$node-sass"
     //         ]
-    //     }
+    //     },
+    // {
+    //     "label": "test4 watch",
+    //     "type": "shell",
+    //     "command": "gulp test4-watch",
+    //     "problemMatcher": [
+    //         "$node-sass"
+    //     ],
+    // },
+    // {
+    //     "label": "test view",
+    //     "type": "shell",
+    //     "command": "explorer",
+    //     "windows": {
+    //         "command": "explorer.exe"
+    //     },
+    //     "args": [
+    //         "${file}"
+    //     ],
+    //     "problemMatcher": [
+    //         "$msCompile"
+    //     ]
+    // },
     // ]
 }

@@ -1,0 +1,8 @@
+@mixin flex {
+    display: flex;
+}
+
+div {
+    font-size: 1.3rem;
+    @include flex;
+}
