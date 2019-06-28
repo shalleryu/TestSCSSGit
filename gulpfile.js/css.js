@@ -7,7 +7,7 @@ var cssnano = require('cssnano');
 var config = require('../config.json');
 var cwd = config.gulp.css.cwd || config.cwd;
 
-function task() {
+function complie() {
     var processors = [
         autoprefixer,
         cssnano
@@ -18,4 +18,9 @@ function task() {
         .pipe(gulp.dest(`./${cwd}/dest`));
 }
 
-exports.task = task;
+async function watch() {
+    await gulp.watch(`./${cwd}/src/*.scss`, complie);
+}
+
+exports.complie = complie;
+exports.watch = watch;

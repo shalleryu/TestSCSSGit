@@ -3,6 +3,6 @@ const css = require('./css');
 const webserver = require('./webserver');
 
 
-exports.build = series(css.task, webserver.task);
+exports.build = series(css.complie, css.watch, webserver.run);
 exports.default = exports.build;
 

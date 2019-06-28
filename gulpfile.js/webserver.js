@@ -3,8 +3,8 @@ var webserver = require('gulp-webserver');
 var config = require('../config.json');
 var src = config.gulp.webserver.src || config.cwd;
 
-function task() {
-   gulp.src(`./${src}`)
+async function run(cb) {
+  await gulp.src(`./${src}`)
     .pipe(webserver({
       livereload: true,
       directoryListing: false,
@@ -13,4 +13,4 @@ function task() {
     }));
 }
 
-exports.task = task;
+exports.run = run;
