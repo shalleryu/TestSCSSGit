@@ -1,0 +1,1 @@
+{"version":3,"sources":["test.scss"],"names":[],"mappings":"AAIA,IACI,gBAAiB,CAJjB,mBAAa,CAAb,YAAa","file":"../src/test.css","sourcesContent":["@mixin flex {\r\n    display: flex;\r\n}\r\n\r\ndiv {\r\n    font-size: 1.1rem;\r\n    @include flex;\r\n}"]}
