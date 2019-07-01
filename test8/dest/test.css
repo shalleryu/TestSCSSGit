@@ -1,2 +1,2 @@
-div{font-size:1.1rem;display:-webkit-box;display:flex}
+.home{background-position:0 0}.home,.home2{background-image:url(images/sprite.png);width:16px;height:16px}.home2{background-position:-16px 0}.home3{background-image:url(images/sprite.png);background-position:0 -16px;width:16px;height:16px}div{font-size:1.1rem;display:-webkit-box;display:flex}
 /*# sourceMappingURL=../maps/test.css.map */

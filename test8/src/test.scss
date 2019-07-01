@@ -1,3 +1,6 @@
+@import "sprite";
+@include sprites($spritesheet-sprites);
+
 @mixin flex {
     display: flex;
 }
