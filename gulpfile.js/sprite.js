@@ -12,7 +12,8 @@ function convertImg() {
   var spriteData = gulp.src(`./${cwd}/images/*.png`).pipe(spritesmith({
     imgName: 'sprite.png',
     cssName: '_sprite.scss',
-    imgPath :'images/sprite.png'
+    imgPath: 'images/sprite.png',
+    cssTemplate: './handlebars/custom.sprite.scss.handlebars'
   }));
 
   var imgStream = spriteData.img

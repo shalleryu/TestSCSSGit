@@ -105,7 +105,7 @@ $spritesheet: (32px, 32px, 'images/sprite.png', $spritesheet-sprites, );
 @mixin sprites($sprites) {
   @each $sprite in $sprites {
     $sprite-name: nth($sprite, 10);
-    .#{$sprite-name} {
+    .icon-#{$sprite-name} {
       @include sprite($sprite);
     }
   }
