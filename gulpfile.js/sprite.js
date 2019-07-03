@@ -3,9 +3,8 @@ var buffer = require('vinyl-buffer');
 var imagemin = require('gulp-imagemin');
 var merge = require('merge-stream');
 var spritesmith = require('gulp.spritesmith');
-
-var config = require('../config.json');
-var cwd = config.cwd;
+var config = require('config');
+var cwd = config.get('cwd');
 // const debug = require('gulp-debug');
 
 function convertImg() {

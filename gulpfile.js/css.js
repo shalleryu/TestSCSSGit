@@ -5,8 +5,8 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('autoprefixer');
 var cssnano = require('cssnano');
-var config = require('../config.json');
-var cwd = config.gulp.css.cwd || config.cwd;
+var config = require('config');
+var cwd = config.get('cwd');
 
 function complie() {
     var processors = [
