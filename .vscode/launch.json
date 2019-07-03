@@ -22,7 +22,7 @@
         {
             "type": "promptString",
             "id": "NODE_APP_INSTANCE",
-            "description": "Name your instance.",
+            "description": "Choose your instance.",
             "default": "test8"
         }
     ]
