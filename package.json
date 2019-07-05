@@ -27,10 +27,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp build"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/shalleryu/TestSCSSGit.git"
-  },
-  "author": "",
+  "repository": "https://github.com/shalleryu/TestSCSSGit.git",
+  "author": "shalleryu <shalleryu@163.com>",
   "license": "ISC"
 }
