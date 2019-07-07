@@ -18,7 +18,7 @@ function complie() {
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss(processors))
         .pipe(sourcemaps.write(`../maps`))
-        .pipe(gulp.dest(`./${cwd}/dest`));
+        .pipe(gulp.dest(`./${cwd}/dist`));
 }
 
 async function watch() {

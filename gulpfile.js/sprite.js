@@ -19,7 +19,7 @@ function convertImg() {
     // DEV: We must buffer our stream into a Buffer for `imagemin`
     .pipe(buffer())
     .pipe(imagemin())
-    .pipe(gulp.dest(`./${cwd}/dest/images/`));
+    .pipe(gulp.dest(`./${cwd}/dist/images/`));
 
   var cssStream = spriteData.css
     .pipe(gulp.dest(`./${cwd}/src/`));

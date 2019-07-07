@@ -9,7 +9,7 @@ async function run(cb) {
       livereload: true,
       directoryListing: false,
       open: true,
-      port: 8081
+      port: 8082
     }));
 }
 
