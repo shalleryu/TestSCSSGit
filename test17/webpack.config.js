@@ -2,23 +2,26 @@ const path = require("path");
 const webpack = require('webpack');
 
 module.exports = {
-  entry: ["@babel/polyfill", './index.js'],
+  entry: ['./index.js'],
   mode: "development",
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: "babel-loader",
-        options: { presets: ["@babel/preset-env", "@babel/preset-react"] }
+        test: /\.(js|jsx|ts)$/,
+        // exclude: /(node_modules|bower_components)/,
+        loader: "babel-loader"
       },
+      {
+        test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
+        loader: 'url-loader?limit=100000'
+      }
     ]
   },
   resolve: {
     alias: {
       'react-native$': 'react-native-web',
     },
-    extensions: ["*", ".js", ".jsx"]
+    extensions: ["*", ".js", ".jsx", ".ts"]
   },
   output: {
     path: path.resolve(__dirname, "web/dist/"),

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Image, View, Text } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
-import HelpScreen from './Help';
+// import HelpScreen from './Help';
 
 class LogoTitle extends React.Component {
   render() {
@@ -49,7 +49,7 @@ class HomeScreen extends React.Component {
             itemId: 86,
             otherParam: 'anything you want here',
           })} />
-        <Button title="Go to Help" onPress={() => this.props.navigation.navigate('Help')} />
+        {/* <Button title="Go to Help" onPress={() => this.props.navigation.navigate('Help')} /> */}
       </View>
     );
   }
@@ -86,7 +86,7 @@ class DetailsScreen extends React.Component {
         <Button title="Go to Home" onPress={() => this.props.navigation.navigate('Home')} />
         <Button title="Go back" onPress={() => { this.props.navigation.goBack() }} />
         <Button title="Go Top" onPress={() => { this.props.navigation.popToTop() }} />
-        <Button title="Go to Help" onPress={() => this.props.navigation.navigate('Help')} />
+        {/* <Button title="Go to Help" onPress={() => this.props.navigation.navigate('Help')} /> */}
         <Button
           title="Update the title"
           onPress={() => this.props.navigation.setParams({ otherParam: 'Updated!' })}
@@ -99,7 +99,7 @@ class DetailsScreen extends React.Component {
 const AppNavigator = createStackNavigator({
   Home: HomeScreen,
   Details: DetailsScreen,
-  Help: HelpScreen
+  // Help: HelpScreen
 }, {
     initialRouteName: "Home",
     defaultNavigationOptions: {
