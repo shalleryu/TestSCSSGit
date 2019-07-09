@@ -7,9 +7,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx|ts)$/,
+        test: /\.(js|jsx)$/,
         // exclude: /(node_modules|bower_components)/,
         loader: "babel-loader"
+      },
+      {
+        test: /\.(ts)$/,
+        loader: "ts-loader"
       },
       {
         test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
