@@ -12,7 +12,7 @@ module.exports = {
         loader: "babel-loader"
       },
       {
-        test: /\.(ts)$/,
+        test: /\.ts$/,
         loader: "ts-loader"
       },
       {
@@ -25,7 +25,7 @@ module.exports = {
     alias: {
       'react-native$': 'react-native-web',
     },
-    extensions: ["*", ".js", ".jsx", ".ts"]
+    extensions: ["*", ".ts", ".js", ".jsx"]
   },
   output: {
     path: path.resolve(__dirname, "web/dist/"),
