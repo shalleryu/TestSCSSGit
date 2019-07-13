@@ -1,0 +1,176 @@
+@mixin arrow_right($size:0.8rem, $color:#666) {
+    width: $size;
+    height: $size;
+    border-right: 0.1rem solid $color;
+    border-bottom: 0.1rem solid $color;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+
+// @mixin arrow($direction, $size, $color) {
+//     content: ""; // ensures the arrows are visible
+
+//     // ensures the size of the arrows is correct:
+//     width: 0;
+//     height: 0;
+
+//     // Lists for positions/directions
+//     $directions: ('down', 'left', 'up', 'right');
+//     $positions: ('top', 'right', 'bottom', 'left');
+
+//     // Loop through each position
+//     @each $position in $positions {
+//         // Calculate the index of the position in the list
+//         $index: index($positions, $position);
+
+//         // If the position matches the direction, render a colored border
+//         @if nth($directions, $index)==$direction {
+//             border-#{$position}: $size solid $color;
+//         }
+
+//         @else {
+//             border-#{$position}: $size solid transparent;
+//         }
+//     }
+// }
+
+// examples:
+
+// .down-arrow {
+//     @include arrow(down, 50px, black);
+// }
+
+// .up-arrow {
+//     @include arrow(up, 20px, black);
+// }
+
+// .left-arrow {
+//     @include arrow(left, 10px, black);
+// }
+
+// .right-arrow {
+//     @include arrow(right, 5px, black);
+// }
+
+// div {
+//     float: left;
+//     margin: 20px;
+// }
+
+
+//   /// Triangle helper mixin
+// /// @param {Direction} $direction - Triangle direction, either `top`, `right`, `bottom` or `left`
+// /// @param {Color} $color [currentcolor] - Triangle color 
+// /// @param {Length} $size [1em] - Triangle size
+// @mixin triangle($direction, $color: currentcolor, $size: 1em) {
+//     @if not index(top right bottom left, $direction) {
+//       @error "Direction must be either `top`, `right`, `bottom` or `left`.";
+//     }
+
+//     width: 0;
+//     height: 0;
+//     content: '';
+//     z-index: 2;
+//     border-#{opposite-position($direction)}: ($size * 1.5) solid $color;
+
+//     $perpendicular-borders: $size solid transparent;
+
+//     @if $direction == top or $direction == bottom {
+//       border-left:   $perpendicular-borders;
+//       border-right:  $perpendicular-borders;
+//     } @else if $direction == right or $direction == left {
+//       border-bottom: $perpendicular-borders;
+//       border-top:    $perpendicular-borders;
+//     }
+//   }
+
+//   .foo::before {
+//     @include triangle(bottom);
+//     position: absolute;
+//     left: 50%;
+//     bottom: 100%;
+//   }
+
+// @charset "UTF-8";
+
+/// Generates a triangle pointing in a specified direction.
+///
+/// @argument {string} $direction
+///   The direction the triangle should point. Accepts `up`, `up-right`,
+///   `right`, `down-right`, `down`, `down-left`, `left` or `up-left`.
+///
+/// @argument {number (with unit)} $width
+///   Width of the triangle.
+///
+/// @argument {number (with unit)} $height
+///   Height of the triangle.
+///
+/// @argument {color} $color
+///   Color of the triangle.
+///
+/// @example scss
+///   .element {
+///     &::before {
+///       @include triangle("up", 2rem, 1rem, #b25c9c);
+///       content: "";
+///     }
+///   }
+///
+///   // CSS Output
+///   .element::before {
+///     border-style: solid;
+///     height: 0;
+///     width: 0;
+///     border-color: transparent transparent #b25c9c;
+///     border-width: 0 1rem 1rem;
+///     content: "";
+///   }
+
+@mixin triangle(
+  $direction,
+  $width,
+  $height,
+  $color
+) {
+  @if not index(
+    "up" "up-right" "right" "down-right" "down" "down-left" "left" "up-left",
+    $direction
+  ) {
+    @error "Direction must be `up`, `up-right`, `right`, `down-right`, " +
+           "`down`, `down-left`, `left` or `up-left`.";
+  } @else if not _is-color($color) {
+    @error "`#{$color}` is not a valid color for the `$color` argument in " +
+           "the `triangle` mixin.";
+  } @else {
+    border-style: solid;
+    height: 0;
+    width: 0;
+
+    @if $direction == "up" {
+      border-color: transparent transparent $color;
+      border-width: 0 ($width / 2) $height;
+    } @else if $direction == "up-right" {
+      border-color: transparent $color transparent transparent;
+      border-width: 0 $width $width 0;
+    } @else if $direction == "right" {
+      border-color: transparent transparent transparent $color;
+      border-width: ($height / 2) 0 ($height / 2) $width;
+    } @else if $direction == "down-right" {
+      border-color: transparent transparent $color;
+      border-width: 0 0 $width $width;
+    } @else if $direction == "down" {
+      border-color: $color transparent transparent;
+      border-width: $height ($width / 2) 0;
+    } @else if $direction == "down-left" {
+      border-color: transparent transparent transparent $color;
+      border-width: $width 0 0 $width;
+    } @else if $direction == "left" {
+      border-color: transparent $color transparent transparent;
+      border-width: ($height / 2) $width ($height / 2) 0;
+    } @else if $direction == "up-left" {
+      border-color: $color transparent transparent;
+      border-width: $width $width 0 0;
+    }
+  }
+}

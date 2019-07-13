@@ -1,0 +1,43 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "npm",
+            "script": "build",
+            "problemMatcher": [
+                "$node-sass"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "options": {
+                "env": {
+                    "NODE_ENV": "${input:NODE_ENV}",
+                    "NODE_APP_INSTANCE": "${input:NODE_APP_INSTANCE}",
+                }
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "type": "pickString",
+            "id": "NODE_ENV",
+            "description": "What type of NODE_ENV do you want to build?",
+            "options": [
+                "development",
+                "production"
+            ],
+            "default": "development"
+        },
+        {
+            "type": "promptString",
+            "id": "NODE_APP_INSTANCE",
+            "description": "Choose your instance.",
+            "default": ""
+        }
+    ]
+}

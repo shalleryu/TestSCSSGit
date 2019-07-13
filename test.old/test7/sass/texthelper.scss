@@ -1,0 +1,10 @@
+@import "compass";
+
+td.dot-dot-dot {
+display:flex;
+@include ellipsis;
+}
+
+td { @include nowrap }
+
+h1.coffee { @include replace-text("coffee-header.png") }
