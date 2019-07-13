@@ -1672,7 +1672,7 @@ babel-plugin-syntax-trailing-function-commas@^7.0.0-beta.0:
   resolved "https://registry.npm.taobao.org/babel-plugin-syntax-trailing-function-commas/download/babel-plugin-syntax-trailing-function-commas-7.0.0-beta.0.tgz#aa213c1435e2bffeb6fca842287ef534ad05d5cf"
   integrity sha1-qiE8FDXiv/62/KhCKH71NK0F1c8=
 
-babel-preset-expo@^5.0.0:
+babel-preset-expo@^5.0.0, babel-preset-expo@^5.2.0:
   version "5.2.0"
   resolved "https://registry.npm.taobao.org/babel-preset-expo/download/babel-preset-expo-5.2.0.tgz#37f466e65c29ab518d91d04c299d84cef07590d2"
   integrity sha1-N/Rm5lwpq1GNkdBMKZ2EzvB1kNI=
