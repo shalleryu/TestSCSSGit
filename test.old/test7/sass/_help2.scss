@@ -1,7 +1,0 @@
-@import "common";
-
-$link-color: red!default;
-h2 {
-    font-size: 1rem;
-    @include my-border(2rem,$link-color);
-}
