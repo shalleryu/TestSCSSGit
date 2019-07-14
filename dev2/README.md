@@ -17,7 +17,11 @@ https://github.com/expo/web-examples/blob/master/react-native-init/README.md
 yarn add react-native-unimodules
 https://github.com/unimodules/react-native-unimodules
 
-5.yarn add expo
+5.yarn add react-native-gesture-handler
+https://reactnavigation.org/docs/en/getting-started.html#installation
+
+yarn add --dev jetifier
+https://github.com/mikehardy/jetifier
 
 6.A problem occurred evaluating project ':expo-gl-cpp'.
 > Cannot get property 'absolutePath' on null object
@@ -68,5 +72,5 @@ android {
 The scheme is the beginning of your OAuth Redirect URL, up to the scheme separator (:) character.
 https://github.com/FormidableLabs/react-native-app-auth#add-redirect-scheme-manifest-placeholder
 
-10.Done.
+10.remove expo by hand and Done.
 

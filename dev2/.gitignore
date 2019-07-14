@@ -11,3 +11,5 @@ web-report/
 android/*
 ios/*
 .vscode
+fix/*
+!fix/expo-gl-cpp/android/build.gradle
