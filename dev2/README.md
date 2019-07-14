@@ -22,7 +22,22 @@ https://github.com/unimodules/react-native-unimodules
 6.A problem occurred evaluating project ':expo-gl-cpp'.
 > Cannot get property 'absolutePath' on null object
 [gl-cpp] fix Gradle tasks being executed in configuration phase (#4697)
+
 https://github.com/expo/expo/commit/697e4e45eefe937091f8994643e7f2485387c65e
 
-use fix\expo-gl-cpp\android
+use:
+fix\expo-gl-cpp\android
 
+7.Could not resolve all files for configuration ':app:debugRuntimeClasspath'.
+> Could not find com.google.android:cameraview:1.0.0.
+
+https://github.com/expo/expo/issues/3639
+
+paste:
+maven {
+  // expo-camera bundles a custom com.google.android:cameraview
+  url "$rootDir/../node_modules/expo-camera/android/maven"
+}
+as the last dependency in android/build.gradle -> allprojects/repositories
+
+8.
