@@ -11,10 +11,13 @@ We have a couple of questions to ask you about how you'd like to name your app:
 3.Using Expo for web in a react-native init project
 Create index.web.js
 Add to your app.json...
+https://github.com/expo/web-examples/blob/master/react-native-init/README.md
 
 4.Using Unimodules in Web
-yarn add @unimodules/core @unimodules/react-native-adapter
+yarn add react-native-unimodules
+https://github.com/unimodules/react-native-unimodules
 
 5.yarn add expo
 
-6.
+6.A problem occurred evaluating project ':expo-gl-cpp'.
+> Cannot get property 'absolutePath' on null object
