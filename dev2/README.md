@@ -9,5 +9,10 @@ We have a couple of questions to ask you about how you'd like to name your app:
 ? What should your Android Studio and Xcode projects be called? dev2
 
 3.Using Expo for web in a react-native init project
+Create index.web.js
+Add to your app.json...
 
-4.
+4.Using Unimodules in Web
+yarn add @unimodules/core @unimodules/react-native-adapter
+
+5.
