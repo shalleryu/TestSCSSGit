@@ -3,20 +3,14 @@
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "web": "expo start --web",
+    "web": "expo start --web --non-interactive",
     "test": "jest --watchAll"
   },
   "jest": {
     "preset": "react-native"
   },
   "dependencies": {
-    "@expo/samples": "~3.0.0",
-    "@expo/vector-icons": "^10.0.1",
     "@react-navigation/web": "^1.0.0-alpha.9",
-    "expo": "^33.0.7",
-    "expo-asset": "^5.0.0",
-    "expo-constants": "^5.0.0",
-    "expo-font": "^5.0.0",
     "expo-web-browser": "^5.0.0",
     "react": "16.8.3",
     "react-dom": "^16.8.6",
