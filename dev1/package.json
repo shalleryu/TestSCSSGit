@@ -8,6 +8,8 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@unimodules/core": "^2.0.1",
+    "@unimodules/react-native-adapter": "^2.0.1",
     "expo": "^33.0.7",
     "react": "16.8.6",
     "react-dom": "^16.8.6",
@@ -27,5 +29,6 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "main": "node_modules/expo/AppEntry.js"
 }

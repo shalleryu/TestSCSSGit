@@ -1289,7 +1289,14 @@
   dependencies:
     compare-versions "^3.4.0"
 
-"@unimodules/react-native-adapter@^2.0.0":
+"@unimodules/core@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.npm.taobao.org/@unimodules/core/download/@unimodules/core-2.0.1.tgz?cache=0&sync_timestamp=1562858585939&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40unimodules%2Fcore%2Fdownload%2F%40unimodules%2Fcore-2.0.1.tgz#e5d760aa1a01885871d2d5c3f1fd3404552e5fcb"
+  integrity sha1-5ddgqhoBiFhx0tXD8f00BFUuX8s=
+  dependencies:
+    compare-versions "^3.4.0"
+
+"@unimodules/react-native-adapter@^2.0.0", "@unimodules/react-native-adapter@^2.0.1":
   version "2.0.1"
   resolved "https://registry.npm.taobao.org/@unimodules/react-native-adapter/download/@unimodules/react-native-adapter-2.0.1.tgz#021f1f7e2247d296986b0d8f1949a4d8e748ce9c"
   integrity sha1-Ah8ffiJH0paYaw2PGUmk2OdIzpw=
@@ -3090,7 +3097,7 @@ expo-web-browser@~5.0.3:
 
 expo@^33.0.7:
   version "33.0.7"
-  resolved "https://registry.npm.taobao.org/expo/download/expo-33.0.7.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fexpo%2Fdownload%2Fexpo-33.0.7.tgz#e121044c04120ad6d74df6b0099d5d8194244349"
+  resolved "https://registry.npm.taobao.org/expo/download/expo-33.0.7.tgz#e121044c04120ad6d74df6b0099d5d8194244349"
   integrity sha1-4SEETAQSCtbXTfawCZ1dgZQkQ0k=
   dependencies:
     "@babel/runtime" "^7.1.2"
@@ -6114,7 +6121,7 @@ react-devtools-core@^3.6.1:
 
 react-dom@^16.8.6:
   version "16.8.6"
-  resolved "https://registry.npm.taobao.org/react-dom/download/react-dom-16.8.6.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-dom%2Fdownload%2Freact-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
+  resolved "https://registry.npm.taobao.org/react-dom/download/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
   integrity sha1-cdYwP2MeiwCX9WFl72CPBR/24Q8=
   dependencies:
     loose-envify "^1.1.0"
