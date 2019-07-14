@@ -1,0 +1,1 @@
+A child component may decide not to re-render itself even though its configuration has changed, as determined by shouldComponentUpdate() (more on this in the Component Lifecycle API section).
