@@ -21,3 +21,8 @@ https://github.com/unimodules/react-native-unimodules
 
 6.A problem occurred evaluating project ':expo-gl-cpp'.
 > Cannot get property 'absolutePath' on null object
+[gl-cpp] fix Gradle tasks being executed in configuration phase (#4697)
+https://github.com/expo/expo/commit/697e4e45eefe937091f8994643e7f2485387c65e
+
+use fix\expo-gl-cpp\android
+
