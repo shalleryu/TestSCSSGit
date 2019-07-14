@@ -40,4 +40,14 @@ maven {
 }
 as the last dependency in android/build.gradle -> allprojects/repositories
 
-8.
+8.Failed to capture fingerprint of output files for task ':expo-av:packageDebugResources' property 'incrementalFolder' during up-to-date check.
+> Could not read path
+
+https://github.com/wix/react-native-navigation/issues/4858
+
+cd android
+./gradlew clean
+cd ..
+react-native run-android
+
+9.
