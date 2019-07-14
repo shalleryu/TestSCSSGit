@@ -2,6 +2,7 @@
   "name": "test28",
   "displayName": "expo init test28",
   "expo": {
-    "sdkVersion": "33.0.0"
+    "sdkVersion": "33.0.0",
+    "platforms": ["web"]
   }
 }
