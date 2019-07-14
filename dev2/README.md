@@ -50,4 +50,23 @@ cd android
 cd ..
 react-native run-android
 
-9.
+9.Execution failed for task ':app:processDebugManifest'.
+> Manifest merger failed : Attribute data@scheme at AndroidManifest.xml requires a placeholder substitution but no value for <appAuthRedirectScheme> is provided.
+
+https://github.com/openid/AppAuth-Android/issues/128
+
+Add redirect scheme manifest placeholder
+To capture the authorization redirect, add the following property to the defaultConfig in android/app/build.gradle:
+
+android {
+  defaultConfig {
+    manifestPlaceholders = [
+      appAuthRedirectScheme: 'io.identityserver.demo'
+    ]
+  }
+}
+The scheme is the beginning of your OAuth Redirect URL, up to the scheme separator (:) character.
+https://github.com/FormidableLabs/react-native-app-auth#add-redirect-scheme-manifest-placeholder
+
+10.Done.
+
