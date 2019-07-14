@@ -15,4 +15,6 @@ Add to your app.json...
 4.Using Unimodules in Web
 yarn add @unimodules/core @unimodules/react-native-adapter
 
-5.
+5.yarn add expo
+
+6.
