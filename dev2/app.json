@@ -1,4 +1,9 @@
 {
   "displayName": "com.shalleryu.dev2",
-  "name": "dev2"
+  "name": "dev2",
+  "expo": {
+    "platforms": [
+      "web"
+    ]
+  }
 }

@@ -8,4 +8,6 @@ We have a couple of questions to ask you about how you'd like to name your app:
 ? What should your app appear as on a user's home screen? com.shalleryu.dev2
 ? What should your Android Studio and Xcode projects be called? dev2
 
-3.
+3.Using Expo for web in a react-native init project
+
+4.
