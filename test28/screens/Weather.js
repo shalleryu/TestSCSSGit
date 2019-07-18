@@ -1,23 +1,22 @@
 import React, { Component } from 'react';
 import { Button, FlatList, Platform, StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
-import WeatherScreen from './screens/Weather';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android: 'Double tap R on your keyboard to reload,\n' + 'Shake or press menu button for dev menu',
 });
 
-class HomeScreen extends Component {
+export default class Weather extends Component {
 
-  static menu = [{ title: 'weather', route: 'Weather' }];
+  static data = [];
 
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to React Native!</Text>
         <Text style={styles.instructions}>{instructions}</Text>
-        <FlatList data={HomeScreen.menu} renderItem={({ item }) => <Button
+        <FlatList data={Weather.data} renderItem={({ item }) => <Button
           title={item.title}
           onPress={this.doNavigate(item.route)}
         />} />
@@ -31,13 +30,6 @@ class HomeScreen extends Component {
   }
 
 }
-
-const AppNavigator = createStackNavigator({
-  Home: {
-    screen: HomeScreen
-  },
-  Weather: WeatherScreen
-});
 
 const styles = StyleSheet.create({
   container: {
@@ -58,4 +50,3 @@ const styles = StyleSheet.create({
 });
 
 
-export default createAppContainer(AppNavigator);
