@@ -29,6 +29,8 @@ target 'test28' do
 
   use_unimodules!
 
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+
   target 'test28Tests' do
     inherit! :search_paths
   end
