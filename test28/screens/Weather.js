@@ -1,52 +1,136 @@
-import React, { Component } from 'react';
-import { Button, FlatList, Platform, StyleSheet, Text, View } from 'react-native';
-import { createStackNavigator, createAppContainer } from 'react-navigation';
+import React from 'react';
+import {
+  ActivityIndicator,
+  ImageBackground,
+  KeyboardAvoidingView,
+  Platform,
+  StyleSheet,
+  Text,
+  View,
+  StatusBar,
+} from 'react-native';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' + 'Shake or press menu button for dev menu',
-});
+import { fetchLocationId, fetchWeather } from '../utils/api';
+import getImageForWeather from '../utils/getImageForWeather';
 
-export default class Weather extends Component {
+import SearchInput from '../components/SearchInput';
 
-  static data = [];
+export default class App extends React.Component {
+  state = {
+    loading: false,
+    error: false,
+    location: '',
+    temperature: 0,
+    weather: '',
+  };
+
+  componentDidMount() {
+    this.handleUpdateLocation('San Francisco');
+  }
+
+  handleUpdateLocation = async city => {
+    if (!city) return;
+
+    this.setState({ loading: true }, async () => {
+      try {
+        const locationId = await fetchLocationId(city);
+        const { location, weather, temperature } = await fetchWeather(
+          locationId,
+        );
+
+        this.setState({
+          loading: false,
+          error: false,
+          location,
+          weather,
+          temperature,
+        });
+      } catch (e) {
+        this.setState({
+          loading: false,
+          error: true,
+        });
+      }
+    });
+  };
 
   render() {
+    const { loading, error, location, weather, temperature } = this.state;
+
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-        <FlatList data={Weather.data} renderItem={({ item }) => <Button
-          title={item.title}
-          onPress={this.doNavigate(item.route)}
-        />} />
-      </View>
+      <KeyboardAvoidingView style={styles.container} behavior="padding">
+        <StatusBar barStyle="light-content" />
+        <ImageBackground
+          source={getImageForWeather(weather)}
+          style={styles.imageContainer}
+          imageStyle={styles.image}
+        >
+          <View style={styles.detailsContainer}>
+            <ActivityIndicator animating={loading} color="white" size="large" />
+
+            {!loading && (
+              <View>
+                {error && (
+                  <Text style={[styles.smallText, styles.textStyle]}>
+                    Could not load weather, please try a different city.
+                  </Text>
+                )}
+
+                {!error && (
+                  <View>
+                    <Text style={[styles.largeText, styles.textStyle]}>
+                      {location}
+                    </Text>
+                    <Text style={[styles.smallText, styles.textStyle]}>
+                      {weather}
+                    </Text>
+                    <Text style={[styles.largeText, styles.textStyle]}>
+                      {`${Math.round(temperature)}°`}
+                    </Text>
+                  </View>
+                )}
+
+                <SearchInput
+                  placeholder="Search any city"
+                  onSubmit={this.handleUpdateLocation}
+                />
+              </View>
+            )}
+          </View>
+        </ImageBackground>
+      </KeyboardAvoidingView>
     );
-
   }
-
-  doNavigate = (screen) => {
-    return () => this.props.navigation.navigate(screen);
-  }
-
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#34495E',
+  },
+  imageContainer: {
+    flex: 1,
+  },
+  image: {
+    flex: 1,
+    width: null,
+    height: null,
+    resizeMode: 'cover',
+  },
+  detailsContainer: {
+    flex: 1,
     justifyContent: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: 'rgba(0,0,0,0.2)',
+    paddingHorizontal: 20,
   },
-  welcome: {
-    fontSize: 20,
+  textStyle: {
     textAlign: 'center',
-    margin: 10,
+    fontFamily: Platform.OS === 'ios' ? 'AvenirNext-Regular' : 'Roboto',
+    color: 'white',
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  largeText: {
+    fontSize: 44,
+  },
+  smallText: {
+    fontSize: 18,
   },
 });
-
-
