@@ -1,6 +1,10 @@
+import { Platform } from 'react-native';
+
+let server = Platform.OS == 'web' ? 'http://localhost:3000' : 'https://www.metaweather.com';
+
 export const fetchLocationId = async city => {
   const response = await fetch(
-    `https://www.metaweather.com/api/location/search/?query=${city}`,
+    `${server}/api/location/search/?query=${city}`,
   );
   const locations = await response.json();
   return locations[0].woeid;
@@ -8,7 +12,7 @@ export const fetchLocationId = async city => {
 
 export const fetchWeather = async woeid => {
   const response = await fetch(
-    `https://www.metaweather.com/api/location/${woeid}/`,
+    `${server}/api/location/${woeid}/`,
   );
   const { title, consolidated_weather } = await response.json();
   const { weather_state_name, the_temp } = consolidated_weather[0];
