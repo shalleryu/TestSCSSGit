@@ -1,6 +1,9 @@
 import { Platform } from 'react-native';
 
-let server = Platform.OS == 'web' ? 'http://localhost:3000' : 'https://www.metaweather.com';
+const server = Platform.select({
+  web: 'http://localhost:3000',
+  default: 'https://www.metaweather.com'
+});
 
 export const fetchLocationId = async city => {
   const response = await fetch(
