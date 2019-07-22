@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, FlatList, Platform, StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import WeatherScreen from './screens/Weather';
+import TimeTrackingScreen from './screens/TimeTracking';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -10,7 +11,10 @@ const instructions = Platform.select({
 
 class HomeScreen extends Component {
 
-  static menu = [{ title: 'weather', route: 'Weather' }];
+  static menu = [
+    { title: 'weather', route: 'Weather' },
+    { title: 'time-tracking', route: 'TimeTracking' }
+  ];
 
   render() {
     return (
@@ -36,7 +40,8 @@ const AppNavigator = createStackNavigator({
   Home: {
     screen: HomeScreen
   },
-  Weather: WeatherScreen
+  Weather: WeatherScreen,
+  TimeTracking: TimeTrackingScreen
 });
 
 const styles = StyleSheet.create({
