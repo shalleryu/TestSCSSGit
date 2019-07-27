@@ -16,6 +16,10 @@ import getImageForWeather from '../utils/getImageForWeather';
 import SearchInput from '../components/SearchInput';
 
 export default class App extends React.Component {
+  static navigationOptions = {
+    title: 'weather',
+  }
+
   state = {
     loading: false,
     error: false,

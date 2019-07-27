@@ -26,3 +26,18 @@ export const fetchWeather = async woeid => {
     temperature: the_temp,
   };
 };
+
+const server2 = Platform.select({
+  web: 'http://localhost:3001',
+  default: 'https://unsplash.it'
+});
+
+export const fetchImages = async () => {
+  const response = await fetch(`${server2}/list`);
+  const images = await response.json();
+
+  return images;
+};
+
+export const getImageFromId = id =>
+  `${server2}/${600}/${600}?image=${id}`;

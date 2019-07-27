@@ -14,6 +14,10 @@ import EditableTimer from '../components/EditableTimer';
 import ToggleableTimerForm from '../components/ToggleableTimerForm';
 
 export default class App extends React.Component {
+  static navigationOptions = {
+    title: 'time-tracking',
+  }
+
   state = {
     timers: [
       {
@@ -123,9 +127,9 @@ export default class App extends React.Component {
 
     return (
       <View style={styles.appContainer}>
-        <View style={styles.titleContainer}>
+        {/* <View style={styles.titleContainer}>
           <Text style={styles.title}>Timers</Text>
-        </View>
+        </View> */}
         <KeyboardAvoidingView
           behavior="padding"
           style={styles.timerListContainer}

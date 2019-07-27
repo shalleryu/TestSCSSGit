@@ -3,6 +3,7 @@ import { Button, FlatList, Platform, StyleSheet, Text, View } from 'react-native
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import WeatherScreen from './screens/Weather';
 import TimeTrackingScreen from './screens/TimeTracking';
+import ImageFeedScreen from './screens/ImageFeed';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -13,7 +14,8 @@ class HomeScreen extends Component {
 
   static menu = [
     { title: 'weather', route: 'Weather' },
-    { title: 'time-tracking', route: 'TimeTracking' }
+    { title: 'time-tracking', route: 'TimeTracking' },
+    { title: 'image-feed', route: 'ImageFeed' },
   ];
 
   render() {
@@ -41,7 +43,8 @@ const AppNavigator = createStackNavigator({
     screen: HomeScreen
   },
   Weather: WeatherScreen,
-  TimeTracking: TimeTrackingScreen
+  TimeTracking: TimeTrackingScreen,
+  ImageFeed: ImageFeedScreen,
 });
 
 const styles = StyleSheet.create({

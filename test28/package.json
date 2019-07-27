@@ -5,7 +5,8 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "proxy": "node proxy.js"
+    "proxy": "node proxy.js",
+    "proxy2": "node proxy2.js"
   },
   "dependencies": {
     "react": "16.8.3",
