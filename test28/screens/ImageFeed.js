@@ -1,17 +1,11 @@
-import { AsyncStorage, Modal, NativeModules, Platform, StyleSheet, View } from 'react-native';
-// import { Constants } from 'expo';
+import { AsyncStorage, Modal, Platform, StyleSheet, View } from 'react-native';
 import React from 'react';
 
 import Comments from './Comments';
 import Feed from './Feed';
+import { statusBarHeight } from '../constants/Platform';
 
-const { StatusBarManager } = NativeModules;
 const ASYNC_STORAGE_COMMENTS_KEY = 'ASYNC_STORAGE_COMMENTS_KEY';
-
-let statusBarHeight = 0;
-StatusBarManager && StatusBarManager.getHeight(({ height }) => {
-  statusBarHeight = height;
-});
 
 export default class ImageFeed extends React.Component {
 
@@ -110,14 +104,14 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop:
       Platform.OS === 'android' || platformVersion < 11
-        ? statusBarHeight//Constants.statusBarHeight
+        ? statusBarHeight
         : 0,
   },
   comments: {
     flex: 1,
     marginTop:
       Platform.OS === 'ios' && platformVersion < 11
-        ? statusBarHeight//Constants.statusBarHeight
+        ? statusBarHeight
         : 0,
   },
 });
