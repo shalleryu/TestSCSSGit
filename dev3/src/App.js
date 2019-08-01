@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { createSwitchNavigator } from "@react-navigation/core";
+import { createBrowserApp } from "@react-navigation/web";
 
 function App() {
   return (
@@ -23,4 +25,8 @@ function App() {
   );
 }
 
-export default App;
+const MyNavigator = createSwitchNavigator({
+  Home: App
+});
+
+export default createBrowserApp(MyNavigator);
