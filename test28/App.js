@@ -4,6 +4,7 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 import WeatherScreen from './screens/Weather';
 import TimeTrackingScreen from './screens/TimeTracking';
 import ImageFeedScreen from './screens/ImageFeed';
+import ContactListNavigator from './routes/contactlist';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -16,6 +17,7 @@ class HomeScreen extends Component {
     { title: 'weather', route: 'Weather' },
     { title: 'time-tracking', route: 'TimeTracking' },
     { title: 'image-feed', route: 'ImageFeed' },
+    { title: 'contact-list', route: 'ContactList' },
   ];
 
   render() {
@@ -45,6 +47,7 @@ const AppNavigator = createStackNavigator({
   Weather: WeatherScreen,
   TimeTracking: TimeTrackingScreen,
   ImageFeed: ImageFeedScreen,
+  ContactList: ContactListNavigator
 });
 
 const styles = StyleSheet.create({
