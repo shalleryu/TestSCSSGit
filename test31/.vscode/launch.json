@@ -5,15 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "node",
+            "type": "chrome",
             "request": "launch",
-            "name": "Server",
-            "program": "${workspaceFolder}\\server\\index.js",
-            "serverReadyAction": {
-                "pattern": "listening on port ([0-9]+)",
-                "uriFormat": "http://localhost:%s",
-                "action": "debugWithChrome"
-            }
+            "name": "Launch Chrome",
+            "url": "http://localhost:9000/page.html",
+            "webRoot": "${workspaceFolder}",
+            "preLaunchTask": "start:dev"
         },
         {
             "type": "node",
@@ -28,13 +25,4 @@
             ],
         }
     ],
-    "compounds": [
-        {
-            "name": "Server/Client",
-            "configurations": [
-                "Server",
-                "Client"
-            ]
-        }
-    ]
 }
