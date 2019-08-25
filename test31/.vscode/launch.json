@@ -15,7 +15,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Client",
+            "name": "Launch Node",
             "program": "${workspaceFolder}\\src\\index.js",
             "sourceMaps": true,
             "runtimeArgs": [
