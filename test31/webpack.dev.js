@@ -8,7 +8,7 @@ module.exports = merge(common, {
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
-        openPage: 'page.html',
+        openPage: 'index.html',
         port: 9000
     }
 });
