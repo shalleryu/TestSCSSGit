@@ -3,7 +3,7 @@ import React from 'react';
 
 import Comments from './Comments';
 import Feed from './Feed';
-import { statusBarHeight } from '../constants/Platform';
+import { Constants } from '../utils/Platform';
 
 const ASYNC_STORAGE_COMMENTS_KEY = 'ASYNC_STORAGE_COMMENTS_KEY';
 
@@ -104,14 +104,14 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop:
       Platform.OS === 'android' || platformVersion < 11
-        ? statusBarHeight
+        ?  Constants.statusBarHeight
         : 0,
   },
   comments: {
     flex: 1,
     marginTop:
       Platform.OS === 'ios' && platformVersion < 11
-        ? statusBarHeight
+        ?  Constants.statusBarHeight
         : 0,
   },
 });

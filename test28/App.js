@@ -5,6 +5,7 @@ import WeatherScreen from './screens/Weather';
 import TimeTrackingScreen from './screens/TimeTracking';
 import ImageFeedScreen from './screens/ImageFeed';
 import ContactListNavigator from './routes/contactlist';
+import MessagingScreen from './screens/Messaging';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -18,6 +19,7 @@ class HomeScreen extends Component {
     { title: 'time-tracking', route: 'TimeTracking' },
     { title: 'image-feed', route: 'ImageFeed' },
     { title: 'contact-list', route: 'ContactList' },
+    { title: 'messaging', route: 'Messaging' },
   ];
 
   render() {
@@ -47,7 +49,8 @@ const AppNavigator = createStackNavigator({
   Weather: WeatherScreen,
   TimeTracking: TimeTrackingScreen,
   ImageFeed: ImageFeedScreen,
-  ContactList: ContactListNavigator
+  ContactList: ContactListNavigator,
+  Messaging: MessagingScreen
 });
 
 const styles = StyleSheet.create({
