@@ -1282,14 +1282,7 @@
     lodash.unescape "4.0.1"
     semver "5.5.0"
 
-"@unimodules/core@^2.0.0":
-  version "2.0.1"
-  resolved "https://registry.npm.taobao.org/@unimodules/core/download/@unimodules/core-2.0.1.tgz#e5d760aa1a01885871d2d5c3f1fd3404552e5fcb"
-  integrity sha1-5ddgqhoBiFhx0tXD8f00BFUuX8s=
-  dependencies:
-    compare-versions "^3.4.0"
-
-"@unimodules/core@^2.0.1":
+"@unimodules/core@^2.0.0", "@unimodules/core@^2.0.1":
   version "2.0.1"
   resolved "https://registry.npm.taobao.org/@unimodules/core/download/@unimodules/core-2.0.1.tgz?cache=0&sync_timestamp=1562858585939&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40unimodules%2Fcore%2Fdownload%2F%40unimodules%2Fcore-2.0.1.tgz#e5d760aa1a01885871d2d5c3f1fd3404552e5fcb"
   integrity sha1-5ddgqhoBiFhx0tXD8f00BFUuX8s=
@@ -4778,9 +4771,9 @@ lodash.unescape@4.0.1:
   integrity sha1-vyJJiGzlFM2hEvrpIYzcBlIR/Jw=
 
 lodash@^4.16.2, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.5.0, lodash@^4.6.0, lodash@^4.6.1:
-  version "4.17.14"
-  resolved "https://registry.npm.taobao.org/lodash/download/lodash-4.17.14.tgz?cache=0&sync_timestamp=1562774134174&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flodash%2Fdownload%2Flodash-4.17.14.tgz#9ce487ae66c96254fe20b599f21b6816028078ba"
-  integrity sha1-nOSHrmbJYlT+ILWZ8htoFgKAeLo=
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 log-symbols@^2.2.0:
   version "2.2.0"
