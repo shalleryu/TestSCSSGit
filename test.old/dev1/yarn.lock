@@ -1282,14 +1282,7 @@
     lodash.unescape "4.0.1"
     semver "5.5.0"
 
-"@unimodules/core@^2.0.0":
-  version "2.0.1"
-  resolved "https://registry.npm.taobao.org/@unimodules/core/download/@unimodules/core-2.0.1.tgz#e5d760aa1a01885871d2d5c3f1fd3404552e5fcb"
-  integrity sha1-5ddgqhoBiFhx0tXD8f00BFUuX8s=
-  dependencies:
-    compare-versions "^3.4.0"
-
-"@unimodules/core@^2.0.1":
+"@unimodules/core@^2.0.0", "@unimodules/core@^2.0.1":
   version "2.0.1"
   resolved "https://registry.npm.taobao.org/@unimodules/core/download/@unimodules/core-2.0.1.tgz?cache=0&sync_timestamp=1562858585939&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40unimodules%2Fcore%2Fdownload%2F%40unimodules%2Fcore-2.0.1.tgz#e5d760aa1a01885871d2d5c3f1fd3404552e5fcb"
   integrity sha1-5ddgqhoBiFhx0tXD8f00BFUuX8s=
@@ -2317,9 +2310,9 @@ decamelize@^1.1.1, decamelize@^1.2.0:
   integrity sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=
 
 decode-uri-component@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.npm.taobao.org/decode-uri-component/download/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
-  integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.2.tgz#e69dbe25d37941171dd540e024c444cd5188e1e9"
+  integrity sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==
 
 dedent@^0.6.0:
   version "0.6.0"
