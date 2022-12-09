@@ -1282,14 +1282,7 @@
     lodash.unescape "4.0.1"
     semver "5.5.0"
 
-"@unimodules/core@^2.0.0":
-  version "2.0.1"
-  resolved "https://registry.npm.taobao.org/@unimodules/core/download/@unimodules/core-2.0.1.tgz#e5d760aa1a01885871d2d5c3f1fd3404552e5fcb"
-  integrity sha1-5ddgqhoBiFhx0tXD8f00BFUuX8s=
-  dependencies:
-    compare-versions "^3.4.0"
-
-"@unimodules/core@^2.0.1":
+"@unimodules/core@^2.0.0", "@unimodules/core@^2.0.1":
   version "2.0.1"
   resolved "https://registry.npm.taobao.org/@unimodules/core/download/@unimodules/core-2.0.1.tgz?cache=0&sync_timestamp=1562858585939&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40unimodules%2Fcore%2Fdownload%2F%40unimodules%2Fcore-2.0.1.tgz#e5d760aa1a01885871d2d5c3f1fd3404552e5fcb"
   integrity sha1-5ddgqhoBiFhx0tXD8f00BFUuX8s=
@@ -6073,9 +6066,9 @@ qs@^6.5.0:
   integrity sha1-QdwaAV49WB8WIXdr4xr7KHapsbw=
 
 qs@~6.5.2:
-  version "6.5.2"
-  resolved "https://registry.npm.taobao.org/qs/download/qs-6.5.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fqs%2Fdownload%2Fqs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
-  integrity sha1-yzroBuh0BERYTvFUzo7pjUA/PjY=
+  version "6.5.3"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.3.tgz#3aeeffc91967ef6e35c0e488ef46fb296ab76aad"
+  integrity sha512-qxXIEh4pCGfHICj1mAJQ2/2XVZkjCDTcEgfoSQxc/fYivUZxTkk7L3bDBJSoNrEzXI17oUO5Dp07ktqE5KzczA==
 
 query-string@^6.2.0:
   version "6.8.1"
